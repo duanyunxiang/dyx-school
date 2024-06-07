@@ -32,4 +32,4 @@ jobs:
         with:
           sarif_file: ${{steps.scan.outputs.sarif}}
       - name: "maven打包"
-        run: mvn -B package --file first-school/pom.xml
+        run: mvn -B package --file config-school/pom.xml

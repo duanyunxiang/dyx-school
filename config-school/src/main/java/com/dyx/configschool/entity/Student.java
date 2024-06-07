@@ -1,4 +1,4 @@
-package com.dyx.firstschool.entity;
+package com.dyx.configschool.entity;
 
 import lombok.Getter;
 import lombok.Setter;

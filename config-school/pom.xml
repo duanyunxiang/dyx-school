@@ -8,11 +8,13 @@
         <version>3.3.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.dyx</groupId>
-    <artifactId>first-school</artifactId>
+    <artifactId>config-school</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>first-school</name>
-    <description>first-school</description>
+    <name>config-school</name>
+    <description>config-school</description>
+
     <properties>
         <java.version>17</java.version>
     </properties>
