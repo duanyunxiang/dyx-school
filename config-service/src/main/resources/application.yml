@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          # 远程git仓库地址
+          uri: https://github.com/duanyunxiang/config-repo
+          # 分支
+          default-label: master
+          # 与远程仓库建立连接的超时时间
+          timeout: 5
+          # 启动时克隆远程仓库到本地
+          clone-on-start: true
+          # 强制拉取远程仓库并废弃本地变更
+          force-pull: true
+
+# 配置嵌入式服务器
+server:
+  port: 8888
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 15s
+    threads:
+      max: 50
+      min-spare: 5
