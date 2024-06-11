@@ -24,8 +24,8 @@ jobs:
           cache: gradle
       - name: Build, unit tests and integration tests
         run: |
-          chmod +x gradlew
           cd config-school
+          chmod +x gradlew
           ./gradlew build
       - name: Code vulnerability scanning
         uses: anchore/scan-action@v3
@@ -59,8 +59,8 @@ jobs:
           cache: gradle
       - name: Build container image
         run: |
-          chmod +x gradlew
           cd config-school
+          chmod +x gradlew
           ./gradlew bootBuildImage \
             --imageName ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
       - name: OCI image vulnerability scanning
