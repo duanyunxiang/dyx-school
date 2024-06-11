@@ -24,7 +24,7 @@ jobs:
           cache: gradle
       - name: Build, unit tests and integration tests
         run: |
-          cd config-school
+          cd config-service
           chmod +x gradlew
           ./gradlew build
       - name: Code vulnerability scanning
@@ -59,7 +59,7 @@ jobs:
           cache: gradle
       - name: Build container image
         run: |
-          cd config-school
+          cd config-service
           chmod +x gradlew
           ./gradlew bootBuildImage \
             --imageName ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
