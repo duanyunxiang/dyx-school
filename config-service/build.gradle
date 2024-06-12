@@ -43,6 +43,12 @@ dependencyManagement {
     }
 }
 
+bootBuildImage {
+    builder = "docker.io/paketobuildpacks/builder-jammy-base:0.4.302"
+    imageName = "${project.name}"
+    environment = ["BP_JVM_VERSION": "17"]
+}
+
 tasks.named('test') {
     useJUnitPlatform()
 }
